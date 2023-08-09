@@ -4,6 +4,7 @@ Created on Tue Aug  8
 
 @author: 이승헌
 
+csv파일에 따라 바꿔서 사용 가능.
 """
 
 import pandas as pd
@@ -73,7 +74,7 @@ for year_month, group in merged_data.groupby(merged_data['일시'].dt.to_period(
         ax.plot(group['일시'], group[col])
         ax.set_ylabel(label, fontsize=20)
         ax.set_title(f'{label} ({year_month})', fontsize=25)
-        fig.suptitle(f'{year_month}  해양기상부이_거제도', fontsize=40, fontweight='bold')
+        fig.suptitle(f'{year_month}  거제도', fontsize=40, fontweight='bold')
         # 5일 간격으로 날짜 표시
         ax.xaxis.set_major_locator(plt.MaxNLocator(6))
         ax.tick_params(axis='x', rotation=45)
