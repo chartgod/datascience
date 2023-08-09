@@ -15,7 +15,7 @@ import numpy as np
 plt.rcParams['font.family'] = 'Malgun Gothic'
 
 # 데이터 파일 경로
-file_path = r'C:\Users\ust21\Desktop\2023_이승헌\2023\Project\2023_특화해양예보_code_figure\base_file\해양기상부이\해양기상부이_거제도.csv'
+file_path = r'해양기상부이_거제도.csv'
 
 # 데이터 불러오기 (encoding을 'cp949'로 설정)
 df = pd.read_csv(file_path, encoding='cp949')
@@ -60,7 +60,7 @@ df.drop(columns=['pressure_diff'], inplace=True)
 merged_data['현지기압(hPa)'] = df['현지기압(hPa)']
 
 # 그래프를 저장할 폴더 경로
-result_folder = r'C:\Users\ust21\Desktop\2023_이승헌\2023\Project\2023_특화해양예보_code_figure\base_file\해양기상부이\해양기상부이_거제도'
+result_folder = r'해양기상부이_거제도'
 os.makedirs(result_folder, exist_ok=True)
 
 # 월별 차트 그리기
